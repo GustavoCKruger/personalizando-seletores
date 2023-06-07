@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <style>
+        h1{
+            background-color: var(--cor-principal);
+            color: white;
+            font-size: 100%;
+        }
+        .centralizado{
+            text-align: center;
+        }
+        p.centralizado{
+            font-weight: bold;
+        }
+
+        .sublinhado{
+            text-decoration: underline;
+            font-style: italic;
+            background-color: cadetblue;
+        }
+        #importante{
+            background-color: darkviolet;
+            color: lavenderblush;
+        }
+        h1 > strong{
+            background-color: aqua;
+            color: royalblue;
+        }
+        h1+p{
+            background-color: darkmagenta;
+        }
+        p.surprise{
+            display: none;
+        }
+        div.surprise:hover > p.surprise{
+            display: block;
+            background-color: black;
+            color: aliceblue;
+        }
+        p::first-letter{
+            font-size: 175%;
+            border: 1px solid black;
+        }
+        p::selection{
+            color: crimson;
+            background-color: darkblue;
+        }
+        :root{
+            --cor-principal: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="importante" class="centralizado sublinhado">titulo  principal</h1>
+    <p><strong> ipsum dolor, sit amet consectetur adipisicing elit. Enim a blanditiis eveniet dicta sunt error voluptatibus soluta, ex aut nisi veniam voluptas, veritatis officia ullam. Ea beatae excepturi ipsam cumque!</strong></p>
+    <p class="sublinhado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus minus sequi omnis quam eos fuga, laboriosam vitae deleniti possimus tempore. Similique quos dolor, tenetur nostrum saepe autem animi atque illum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, ad consequatur aliquid esse aspernatur voluptatibus, pariatur quo rerum suscipit quos molestiae dolor numquam perferendis unde laborum omnis obcaecati, harum distinctio?</p>
+    <h1 class="centralizado"><strong>secundario</strong></h1>
+    <p class="centralizado" class="sublinhado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minima, dicta autem vel in fuga adipisci. Totam aliquid obcaecati quasi accusantium repellat deleniti rerum unde. Vero amet inventore dignissimos quae?</p>
+    <p class="centralizado" id="importante">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sit, error eum quisquam consectetur mollitia laborum itaque hic facere corporis quas soluta rem repudiandae? Culpa, distinctio voluptate! Animi, enim vel?</p>
+    <p class="centralizado">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, perspiciatis autem nostrum debitis labore praesentium tenetur sapiente veniam officia repellendus possimus architecto molestiae ut numquam voluptatibus error facilis voluptate iste</p>
+
+
+    <div class="surprise">
+        <p>Passe o mouse aquii</p>
+        <p class="surprise"> surprise</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laboriosam natus dolores ducimus quae, voluptatem harum. Excepturi, veniam exercitationem maiores ab quisquam numquam deleniti, repellendus quidem iste quis sequi natus.</p>
+
+</body>
+</html>
